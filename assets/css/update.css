@@ -1,0 +1,735 @@
+/*--------------------updates and overrides for the current css----------------------*/
+
+/*--------------------------
+Table of Contents
+----------------------------
+	#Overrides
+    #After Fixed header ( category section )
+    #Themes and Layouts
+
+	1.	Home page
+		- banner section
+		- search section
+		- job by category | combined category section
+        - featured job section
+
+    2. Employee - Job List page 
+        - override
+        - page heading
+        - search section
+        - filter
+
+    3. Employee - Login Page
+        - social login
+
+    4. Emplyoee - Job Detail Page
+
+    5. Employer - Home
+
+    6 Employer Job List ( Manage Jobs )
+
+    7. Employer profile pic cropper
+
+
+	#	Responsive Layout
+		- Override
+        - Home - top employers
+        - Employee - job list
+        - Job list - sidebar filter
+        - Single page
+
+*/
+
+/*=====================================
+======== # Overrides
+======================================*/
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  /*font-style: italic;*/
+  font-size: 14px;
+}
+.post-list .single-post {
+    padding: 20px 15px;
+}
+.symbol-input100{
+    bottom: 15%;
+}
+.banner-area.custom_bg{
+    background: none;
+}
+.banner-area.custom_bg .overlay{
+    background: none;
+    display: none;
+}
+.about-content.custom_header{
+    padding : 0px 0px 5px 0px;
+    background: #fff;
+    margin-top: 40px;
+}
+.link-nav{
+    color: #777;
+    margin: 0;
+    padding: 5px 0;
+}
+.link-nav a{
+    color: #777;
+}
+.search-section.page {
+    padding: 110px 0 0 0;
+}
+.section-gap {
+    padding: 60px 0;
+}
+.form-control{
+    padding: 10px 0.75rem !important;
+}
+.post-list .single-post .btns li{
+    border: 0;
+    background: transparent;
+    padding: 0 0 0 10px;
+}
+.post-list .single-post .btns li a {
+    color: #fff;
+    background: #fdb525;
+    font-size: 16px;
+}
+
+#mobile-nav-toggle i {
+    color: #000;
+}
+
+.input100{
+    height: 44px;
+}
+
+.sidebar .single-slidebar .cat-list li:hover p {
+    color: #000;
+}
+
+.post-list .single-post .btns li a {
+    padding: 5px 10px;
+}
+
+/*for fixed header*/
+#mobile-nav-toggle {
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    width: 30px;
+    overflow: hidden;
+}
+
+#mobile-nav {
+    right: -260px;
+    left: auto;
+}
+#mobile-body-overly {
+    right: 0;
+    left: auto;
+}
+.mobile-nav-active #mobile-nav{
+    left: auto !important;
+    right: 0;
+}
+
+
+
+
+
+/*=====================================
+======== # After Fixed header ( category section )
+======================================*/
+
+.category-fixed-top {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    z-index: 996;
+    background: #eee;
+    padding: 5px 0;
+    left: 0;
+    box-shadow: 0 0 5px #777;
+}
+.ft_category_wrap a {
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+.ft_category_wrap a span, .ft_category_wrap span {
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+}
+.ft-cat-main-row div {
+    border-right: 1px solid #777;
+}
+.ft-cat-main-row div:last-of-type, .ft-cat-main-row div:first-of-type {
+    border-right: 0;
+}
+
+
+@media screen and ( min-width: 960px ){
+    .category-fixed-top{
+        top: 74px;
+    }
+}
+
+@media screen and ( max-width: 480px ){
+    .ft_category_wrap a span, .ft_category_wrap span {
+        font-size: 10px;
+    }
+}
+
+/*=====================================
+======== # Themes and Layouts
+======================================*/
+
+/*header and breadcumb*/
+.jt-breadcumb {
+    border-bottom: 1px solid #eee;
+}
+
+.banner-area.custom_bg.no_search {
+    background: none;
+    padding: 110px 0 0 0;
+}
+.no_search .overlay.overlay-bg{
+    display: none;
+}
+
+/*fixed header custom login*/
+.custom-login {
+    position: fixed;
+    right: 15px;
+    top: 2px;
+}
+.custom-login li {
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+.custom-login li button{
+    color: #e0a122;
+    /*background: #fdb525;*/
+    /*padding: 4px 0;*/
+    font-size: 14px;
+}
+
+.modal_login_option li a{
+    display: block;
+    border: 1px solid #fdb525;
+    padding: 10px 15px;
+    margin: 15px 0;
+    color: #000;
+}
+
+.close-modal-span {
+    font-size: 22px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.auth_option{
+    padding: 35px 15px;
+}
+
+@media screen and ( max-width: 480px ){
+    .banner-area.custom_bg.no_search {
+        padding: 90px 0 0 0;
+    }
+}
+
+
+
+/*=====================================
+======== 1.	Home Page
+======================================*/
+
+/*banner section*/
+.banner-content.home_banner-content h4{
+	font-size: 20px;
+    line-height: 32px !important;
+}
+
+.banner-content.home_banner-content{
+	padding-top: 100px;
+}
+
+.banner-content.home_banner-content ul{
+	max-width: 350px;
+}
+
+.banner-content.home_banner-content ul li a{
+	/*color: #fff;*/
+    color: #000;
+	margin: 10px 0;
+    /*background: #fcb63bb8;*/
+    background: #fcb63be0;
+    padding: 15px;
+    display: block;
+}
+
+.banner-content.home_banner-content ul li a:hover{
+	cursor: pointer;
+}
+
+.banner-content.home_banner-content ul li a span{
+	font-weight: bold;
+}
+
+.banner-content.home_banner-content ul li a i{
+	margin-top: 4px;
+}
+
+.banner-content.home_banner-content blockquote {
+    font-size: 16px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.banner-content.home_banner-content blockquote span{
+	display: block;
+}
+.home_banner.search-section .form-wrap{
+    padding: 0;
+    background: transparent;
+    margin: 0;
+}
+
+/*search section*/
+.search_section button{
+	position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    height: 100%;
+    width: 55px;
+    background: #fdb525;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-left: 0;
+
+}
+
+
+/*job by category | combined category section*/
+.combined-cat .cc-wrapper {
+    /*border: 1px solid #ccc;*/
+    padding: 15px 20px;
+    margin: 10px 0;
+    height: 100%;
+    /*box-shadow: 0 0 5px #ccc;*/
+    background: #f9f9f9;
+}
+
+.combined-cat .cc-wrapper .cc-level p{
+	font-weight: bold;
+    color: #000;
+    font-size: 18px;
+    border-bottom: 2px solid #fdb525;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.combined-cat .cc-wrapper .cc-category ul li{
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.combined-cat .cc-wrapper .cc-category ul li a{
+	color: #000;
+	font-size: 16px;
+}
+.combined-cat .cc-wrapper .cc-category ul li a span {
+    color: #777;
+    font-size: 12px;
+}
+
+
+@media screen and ( max-width : 480px ) {
+    .combined-cat .cc-wrapper .cc-category ul li {
+        padding: 5px 15px;
+        margin: 0;
+    }
+    .combined-cat .cc-wrapper .cc-category ul li a{
+        font-size: 14px;
+    }
+    .combined-cat .cc-wrapper .cc-level p{
+        padding-bottom: 0.8rem;
+    }
+    .combined-cat .cc-wrapper{
+        /*padding: 5px 20px;*/
+        padding: 0 5px;
+    }
+
+}
+
+
+/*featured job section*/
+.post-list.featured-job-list-wrap .single-post{
+    padding: 20px 15px;
+    margin-bottom: 20px;
+}
+.post-list.featured-job-list-wrap .single-post .detail{
+    margin-top: 0;
+}
+.thumb img {
+    max-width: 100%;
+}
+
+
+/*Top Employers Section*/
+.company_logo{
+    padding: 15px;
+}
+
+.company_logo img {
+    max-width: 100%;
+}
+
+/*=====================================
+======== 2. Employee - Job List page 
+======================================*/
+
+
+/*override*/
+
+/*page heading*/
+.about-content h1 {
+    /*font-size: 26px;*/
+    font-weight: bold;
+}
+
+/*job list section*/
+.single-post.job_list {
+    margin-bottom: 20px;
+}
+
+/*search section*/
+.search-section button {
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    height: 94%;
+    background: #fff;
+    color: #e1a335;
+    width: 55px;
+    font-size: 20px;
+}
+.search-section .search_wrap{
+    background: #eee;
+}
+.search_btn {
+    position: absolute;
+    right: 1px;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    opacity: 0;
+    width: 55px;
+}
+.jl_filter span{
+    background: #ccc;
+    padding: 12px 13px;
+    border-radius: 50%;
+    color: #000;
+    box-shadow: 0 0 5px #ccc;
+    font-size: 18px;
+}
+
+
+/*=====================================
+======== 3. Employee - Login Page 
+======================================*/
+
+/*social icons*/
+.social_login {
+    color: #fff;
+}
+.ln-btn a{
+    color: #fff;
+}
+.social_login span{
+    color: #000;
+}
+.facebook{
+    background:  #3b5998;
+}
+.google{
+    background: #dc4e41;
+}
+.login_hr span {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 6px 8px;
+}
+.login_hr:before, .login_hr:after {
+    content: "";
+    width: 42%;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    top: 46%;
+}
+.login_hr:before{
+    left: 0;
+}
+.login_hr:after{
+    right: 0;
+}
+
+.fb_iframe_widget{
+    width: 100%;
+    background: #ccc;
+}
+
+
+/*=====================================
+======== # 4. Employee - Job Detail Page
+======================================*/
+
+.jt_btn {
+    background: #fdb525;
+    color: #fff;
+}
+
+.jd_company_logo img{
+    max-width: 100%;
+}
+
+/*.jd_company_page .jd_company_logo{
+    height: 100%;
+    box-shadow: none;
+    background: none;
+    border: 1px solid;
+    padding : 0;
+}*/
+
+
+/*=====================================
+======== # 5. Employer - Home
+======================================*/
+
+
+
+@media screen and ( max-width: 480px ){
+    .employers-home-section {
+        padding: 36px 0;
+    }
+
+    .emp-solutions {
+        padding: 40px 0;
+    }
+
+    .emp-why-us {
+        padding: 40px 0;
+    }
+
+    .about-content.home_banner {
+        padding: 115px 0px 75px 0px;
+        text-align: center;
+    }
+    .about-content.home_banner h1{
+        text-align: center;
+    }
+
+    .sidebar .single-slidebar{
+        /*display: none;*/
+    }
+
+    .headline{
+        display: none !important;
+    }
+}
+
+
+/*===========================================
+======== 6 Employer Job List ( Manage Jobs )
+=============================================*/
+
+.jl_applications {
+    background: #eee;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #000;
+    margin-right: 16px;
+    box-shadow: 0 0 5px #eee;
+}
+.emp-jl-wrapper {
+    box-shadow: 0 0 5px #ccc;
+    padding: 16px 0;
+}
+.jl_btns a {
+    padding: 2px 6px;
+    display: inline-block;
+    color: #777;
+    margin: 8px 0;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+}
+
+/*===========================================
+======== 7 Employer Profile Pic cropper
+=============================================*/
+.cropper-wrapper{
+    height: 300px;
+}
+.sel_image_input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+}
+.sel_image_btn{
+    position: absolute;
+    top: 0;
+
+}
+
+
+/*=====================================
+======== # Responsive Layout
+======================================*/
+
+/*Override*/
+@media screen and ( max-width: 480px ){
+
+	.section-full{
+		padding: 40px 0;
+	}
+
+
+    /*Home - jobs by category*/
+    .combined-cat .cc-wrapper .cc-level{
+        padding: 10px;
+    }
+
+    .featured-job-list-wrap.post-list .single-post h6{
+        margin-bottom: 0;
+    }
+
+    .job-listing-footer ul li{
+        font-size: 12px;
+    }
+
+
+    /*Home - top employers*/
+    .company_logo{
+        padding: 15px;
+    }
+
+
+    /*Employee - job list*/
+    .section-gap {
+        padding: 20px 0;
+    }
+    .search-section.page {
+        padding: 90px 0 0 0;
+    }
+
+    /*make sidebar filters fixed on click*/
+    .sidebar.search {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        bottom: 0;
+        transform: translateY(100%);
+        transition: .5s all ease;
+        -webkit-transition : .5s all ease;
+        -moz-transition : .5s all ease;
+        -o-transition : .5s all ease;
+    }
+
+    .f-header {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 18px;
+        color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        box-shadow: 0 0 5px #ccc;
+        background: #fff;
+    }
+
+    #sidebar_filter form{
+        height: calc( 100vh - 50px );
+        overflow-y: scroll;
+        padding-top: 60px;
+    }
+
+    .sidebar.search .btn-search {
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .post-list {
+        margin-bottom: 20px;
+    }
+
+    /*single page*/
+
+    .about-content.custom_header {
+        padding: 0px 0 10px 0;
+        background: #fff;
+        margin-top: 0;
+
+    }
+    .about-content h1 {
+        font-size: 20px;
+        /*font-weight: bold;*/
+        margin-top: 20px;
+        margin-bottom: -10px;
+        text-align: left;
+    }
+    .link-nav {
+        font-size: 10px;
+        margin: 5px 0;
+        padding: 0;
+    }
+    .link-nav a{
+        font-size: 12px;
+    }
+    .post-list .single-post .btns li a{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /*login*/
+    .wrap-login100 {
+        margin: 90px 0;
+    }
+
+    .post-list .single-post h6{
+        margin-bottom: 0;
+    }
+
+    .job-listing-footer{
+        margin-top: 5px;
+    }
+
+
+}
+
+@media screen and (max-width: 414px){
+    .post-list .details {
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and ( max-width: 320px )
+{
+    .jf-section-fh{
+        display: none;
+    }
+}
